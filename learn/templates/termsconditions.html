@@ -1,0 +1,57 @@
+<!{% extends 'index.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<head>
+    <style>
+body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/log.png);
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
+.mid
+{
+  text-align:center
+}
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: rgb(234, 238, 240);
+  width:50%;
+  padding: 10px;
+  border: 5px solid rgb(218, 216, 226);
+  opacity: 0.7;
+
+}
+</style>
+    <title>Terms And Conditions</title>
+</head>
+<body>
+ <br>
+ <br>
+<div>
+<form action="http://127.0.0.1:8000/terms" method="post" id="regtable" name="terms" onsubmit="return validateall()">
+   {% csrf_token %}
+  <div class="container">
+    <div class="mid">
+        <br>
+        <br>
+      <h1 align="center"style="font-family:verdana;">Terms And Conditions</h1>
+        <p align="center">Last Updated on 3-12-2022</p>
+<p>1)This WebApp acts as a medium between customers and dealers and any of the deals that were happened or happening are not related to us.</p>
+<h2>Cancellation Terms:</h2>
+<p>1)Customers can cancel their bookings without penalty for movie bookings before three days of the selected date.If Cancelled after fifty percent of the ticket price will have to be paid by the customer</p>
+<p>2)Customers can cancel their bookings without penalty for "Musical Concert" bookings before three days of the selected date.If Cancelled after fifty percent of the ticket price will have to be paid by the customer</p>
+<p>3)Customers can cancel their bookings without penalty for "Marriage Halls" bookings before "3 Months" of the selected date.If Cancelled after fifty percent of the price will have to be paid by the customer</p>
+<p>4)Customers can cancel their bookings without penalty for "Catering" bookings before "10 Days" of the selected date.If Cancelled after fifty percent of the price will have to be paid by the customer</p>
+    </div>
+       <a href="http://127.0.0.1:8000/del">Proceed<button type="submit"</button></a>
+  </div>
+</form>
+</div>
+</body>
+</html>
+{% endblock %}

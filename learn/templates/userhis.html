@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>User History</title>
+  <style>
+
+table {
+
+  font-family: arial, sans-serif;
+  color: #080808;
+  border-collapse: collapse;
+
+  width: 100%;
+
+}
+
+
+td, th {
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+
+</style>
+</head>
+  <body background="/static/images/log.png"  style="background-size:cover;" >
+
+
+<!--  <div>-->
+<!--  <div align="left">-->
+<!--<h1><u>Music</u></h1>-->
+<!--  </div>-->
+
+  <div>
+  <div align="left">
+    <br>
+    <br>
+<h1><u>User History</u></h1>
+  </div>
+<table id="music" border="1" cellspacing="0">
+  <tr>
+      <th>S.No</th>
+    <th>Type of Event</th>
+    <th>Name</th>
+      <th>Date</th>
+      <th>Start Time</th>
+<!--    <th>End Time</th>-->
+<!--    <th>Venue</th>-->
+<!--    <th>Food Required</th>-->
+  </tr>
+  <body>
+  {% for i in al %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.Typeofevent}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.starttime}}</td>
+<!--      <td>{{i.endtime}}</td>-->
+<!--    <td>{{i.venue}}</td>-->
+<!--    <td>{{i.isfood}}</td>-->
+  </tr>
+  {% endfor %}
+</body>
+</table>
+ </div>
+</body>
+</html>
+{% endblock %}

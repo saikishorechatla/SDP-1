@@ -1,0 +1,160 @@
+{% extends 'index2.html' %}
+{% block title %}Wedding{% endblock %}
+{% block body %}
+<html>
+  <head>
+    <title>Add Marriage Hall</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      background: url(/static/images/wed3.png) no-repeat center center fixed;
+      background-size: cover;
+<!--         background-size: 70px 100px;-->
+      background-color:#c5eff6;
+      opacity:1.5;
+      }
+      .container{
+      position:absolute;
+      left:0%;
+      length:50%;
+      width: 50%;
+      top:10%;
+      opacity:0.85;
+      }
+      body, div, form, input, select, p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+ }
+
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item:hover p, .item:hover i {
+      color: #095484;
+      }
+      input:hover, select:hover, textarea:hover {
+      box-shadow: 0 0 5px 0 #095484;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container" allign="left">
+    <div class="testbox">
+<form action="http://127.0.0.1:8000/marriage/" method="post">
+          {% csrf_token %}
+        <h1><b>Add Marriage Hall</b></h1>
+        <div class="item">
+          <p><b>Hall Name</b></p>
+          <input type="text" name="name1" required/>
+        </div>
+        <div class="item">
+          <p><b>Hall Address</b></p>
+          <input type="text" name="name2" placeholder="Street address" required/>
+
+          <div class="city-item">
+            <input type="text" name="name3" placeholder="City" required/>
+
+            <input type="text" name="name4" placeholder="Postal / Zip code" minlength="6" maxlength="6" required/>
+
+          </div>
+        </div>
+
+        <div class="item">
+          <p><b>Price Per Event</b></p>
+          <input type="number" name="name5" required/>
+        </div>
+         <div class="item">
+          <p><b>Capacity</b></p>
+          <input type="number" name="name6" required/>
+       <div class="item">
+          <p><b>Phone Number</b></p>
+           <input type="text" name="name7" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits" required />
+        </div>
+        <div class="item">
+          <p><b>Email</b></p>
+          <input type="email" placeholder="Enter Gmail" name="name8" id="email"  pattern=".+@gmail\.com" required>
+        </div>
+        <div class="btn-block">
+          <button type="submit" ><b>ADD</b></button>
+        </div>
+           </div>
+      </form>
+
+    </div>
+      </div>
+  </body>
+</html>
+{% endblock %}

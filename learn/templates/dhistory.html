@@ -1,0 +1,155 @@
+{% extends 'index2.html' %}
+{% block title %}Deals{% endblock %}
+{% block body %}
+<div class="con" >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dealer History</title>
+ <style>
+
+table {
+
+  font-family: arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width: 100%;
+
+}
+
+
+td, th {
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+
+</style>
+</head>
+<body background="/static/images/log.png"  style="background-size:cover;" >
+<div align="center">
+<div align="left">
+<h1><u>Movies Deals</u></h1>
+    <a href="http://127.0.0.1:8000/movdel/"><button type="Delete" ><b>Delete</b></button></a>
+  </div>
+  <div algin="center">
+<table id="movie" border="1" cellspacing="0">
+  <tr>
+      <th>S.No</th>
+    <th>Business</th>
+    <th>Name</th>
+       <th>Price</th>
+      <th>phone Number</th>
+      <th>Email</th>
+  </tr>
+  <body>
+  {% for i in al %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.business}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.price}}</td>
+      <td>{{i.phnum}}</td>
+      <td>{{i.email}}</td>
+  </tr>
+  {% endfor %}
+</body>
+<!--</table>-->
+<!--<div>-->
+<!--  <div align="left">-->
+<!--<h1><u>Catering</u></h1>-->
+<!--  </div>-->
+<!--<table id="catering" border="1" cellspacing="0">-->
+<!--  <tr>-->
+<!--      <th>S.No</th>-->
+<!--    <th>Service Name</th>-->
+<!--    <th>Name</th>-->
+<!--       <th>Price</th>-->
+<!--      <th>Capacity Per Event</th>-->
+<!--      <th>Phone Number</th>-->
+<!--      <th>Email</th>-->
+<!--  </tr>-->
+<!--  <body>-->
+<!--  {% for i in ev %}-->
+<!--  <tr>-->
+<!--    <th scope="row">{{forloop.counter}}</th>-->
+<!--      <td>{{i.sname}}</td>-->
+<!--      <td>{{i.name}}</td>-->
+<!--      <td>{{i.pph}}</td>-->
+<!--      <td>{{i.capacity}}</td>-->
+<!--      <td>{{i.mobile}}</td>-->
+<!--      <td>{{i.email}}</td>-->
+<!--  </tr>-->
+<!--  {% endfor %}-->
+<!--</body>-->
+<!--</table>-->
+
+
+<!--  <div>-->
+<!--  <div align="left">-->
+<!--<h1><u>Music</u></h1>-->
+<!--  </div>-->
+<!--<table id="music" border="1" cellspacing="0">-->
+<!--  <tr>-->
+<!--      <th>S.No</th>-->
+<!--    <th>Concert Name</th>-->
+<!--    <th>Name</th>-->
+<!--       <th>Price</th>-->
+<!--      <th>Phone Number</th>-->
+<!--      <th>Email</th>-->
+<!--  </tr>-->
+<!--  <body>-->
+<!--  {% for i in al %}-->
+<!--  <tr>-->
+<!--    <th scope="row">{{forloop.counter}}</th>-->
+<!--      <td>{{i.conname}}</td>-->
+<!--      <td>{{i.nameor}}</td>-->
+<!--      <td>{{i.price}}</td>-->
+<!--      <td>{{i.phno}}</td>-->
+<!--      <td>{{i.email}}</td>-->
+<!--  </tr>-->
+<!--  {% endfor %}-->
+<!--</body>-->
+<!--</table>-->
+
+
+<!--     <div>-->
+<!--  <div align="left">-->
+<!--<h1><u>Marriage</u></h1>-->
+<!--  </div>-->
+<!--<table id="marriage" border="1" cellspacing="0">-->
+<!--  <tr>-->
+<!--      <th>S.No</th>-->
+<!--    <th>Hall Name</th>-->
+<!--       <th>Price Per Head</th>-->
+<!--      <th>Phone Number</th>-->
+<!--      <th>Email</th>-->
+<!--  </tr>-->
+<!--  <body>-->
+<!--  {% for i in al %}-->
+<!--  <tr>-->
+<!--    <th scope="row">{{forloop.counter}}</th>-->
+<!--      <td>{{i.hall}}</td>-->
+<!--      <td>{{i.pricepe1}}</td>-->
+<!--      <td>{{i.phno1}}</td>-->
+<!--      <td>{{i.email1}}</td>-->
+<!--  </tr>-->
+<!--  {% endfor %}-->
+<!--</body>-->
+<!--</table>-->
+  </div>
+</html>
+</div>
+{% endblock %}

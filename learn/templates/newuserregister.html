@@ -1,0 +1,159 @@
+<!{% extends 'index.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/log.png);
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mid
+{
+  text-align:center
+}
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: rgb(234, 238, 240);
+  width:40%;
+  padding: 10px;
+  border: 5px solid rgb(218, 216, 226);
+  opacity: 0.7;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+#email{
+ width:100%;
+ background:#F1F1F1;
+ padding:1%
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+<div>
+<form action="http://127.0.0.1:8000/userregisteruser" method="post" id="regtable" name="registrationform" onsubmit="return validateall()">
+   {% csrf_token %}
+  <div class="container">
+    <div class="mid">
+      <h1>Register</h1>
+    </div>
+    
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+     <label ><b>Username</b></label>
+   <input type="text" name="uname"   id="uname" placeholder="Enter Your username"required >
+      <label ><b>First Name</b></label>
+   <input type="text" name="fn"   id="fn" placeholder="Enter Your Fisrt Name"required >
+        <label ><b>Last Name</b></label>
+   <input type="text" name="ln"   id="ln" placeholder="Enter Your Last Name"required >
+
+
+    <label ><b>Email</b></label>
+
+    <input type="email" placeholder="Enter Gmail" name="email" id="email" pattern=".+@gmail\.com" required>
+      <br>
+      <br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" name="password" id="password" placeholder="Enter Your Password"minlength="8" required >
+
+<!--      <label  ><b>DOB</b></label><p>-->
+<!--      <br>-->
+<!--       <input type="date" id="DOB" name="DOB" required max="2010-10-15"  ></p><br>-->
+<!--        <label for="Gender" ><b>Gender</b></label>-->
+<!--    <input type="text"  name="Gender" id="Gender" required>-->
+<!--      <label > <b>Select you gender</b></label>-->
+<!--    <select name="Gender"  required>-->
+<!--        <option value="none" selected>Gender</option>-->
+<!--	     <option value="Male"><b>Male</b></option>-->
+<!--	     <option value="Female"><b>Female</b></option>-->
+<!--	     <option value="Other"><b>other</b></option>-->
+<!--   </select>-->
+<!--      <br>-->
+<!--      <br>-->
+
+
+<!--      <label for="mobileno" ><b>Mobile Number</b></label>-->
+<!--    <input type="text" placeholder="Enter Mobile Number" name="mobileno" id="mobileno" minlength="10" required>-->
+
+
+
+
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn"> Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="/login">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
+    </div>
+{% endblock %}

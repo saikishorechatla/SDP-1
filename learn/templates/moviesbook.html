@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block title %} Dealer History {% endblock %}
+{% block body %}
+<head>
+    <style>
+        body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/music3.png);
+  background-size:cover;
+}
+<!--table {-->
+
+<!--  font-family: arial, sans-serif;-->
+
+<!--  border-collapse: collapse;-->
+
+<!--  width: 100%;-->
+
+<!--}-->
+<!--td, th {-->
+
+<!--  border: 1px solid #dddddd;-->
+
+<!--  text-align: left;-->
+<!--  padding: 8px;-->
+<!--  color:black;-->
+<!--}-->
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+</style>
+<!--				   <style>-->
+<!--.alert {-->
+<!--  padding: 20px;-->
+<!--  background-color: #f44336;-->
+<!--  color: white;-->
+<!--}-->
+
+<style>
+.cust_book3{
+
+  border: 15px ;
+  padding: 90px;
+
+}
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity:0.8;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+.button {
+  background-color:#000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+ * {
+  box-sizing: border-box;
+}
+</style>
+
+    </style>
+</head>
+	{% if user.is_authenticated %}
+<br>
+<br>
+<br>
+<html>
+      <div align="center"  >
+        <u><h1 class="book">Movies</h1></u>
+
+
+<br>
+          <br>
+
+<div  class="cust_book3" class="row" >
+  <div  align="center" class="column">
+<table id="customers" border="1" cellspacing="0">
+  <tr>
+    <th>S.No</th>
+    <th>Movie Name</th>
+    <th>Genre</th>
+    <th>Theatre Name</th>
+    <th>Theatre Address</th>
+      <th>Capacity</th>
+      <th>Poster</th>
+      <th>Trailer</th>
+      <th>Book</th>
+  </tr>
+
+  <tbody>
+  {% for j in a %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+    <td >{{j.mname}}</td>
+    <td >{{j.genre}}</td>
+    <td>{{j.name}}</td>
+    <td>{{j.thaddress}}</td>
+    <td>{{j.capacity}}</td>
+    <td>
+          <img src="/media/{{j.image}}" alt="" class="prod-size" width="100" height="=100">
+    </td>
+     <td>
+       <video  width="250" height="200" controls>
+  <source src="/media/{{j.video}}"  >
+</video>
+
+    </td>
+    <td>
+      <a href="/movbooking/"><button class="button" type="submit"><b style="font-size:20px;" style="color:black;">Book</b></button></a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+  </div>
+
+
+<!--<div class="column" allign="center" >-->
+
+<!--    <table  border="1" cellspacing="0">-->
+<!--  <tr>-->
+<!--    <th>Type of Event</th>-->
+<!--  </tr>-->
+<!--  <body>-->
+<!--  {% for i in a %}-->
+<!--  <tr>-->
+<!--<
+
+ </tr>-->
+<!--  {% endfor %}-->
+
+<!--</table>-->
+
+      </div>
+    </form>
+      </div>
+{% else %}
+<br>
+<br>
+<br>
+
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+  <strong> Please Sign In</strong>
+</div>
+					{% endif %}
+</body>
+</html>
+</html>
+{% endblock %}

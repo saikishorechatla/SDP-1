@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51739395-b37c-4570-be6a-c5bd877821fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SDP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/sdp/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/addmovies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/dcontact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/dhist1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/dhist2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/dhist3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/im.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/movbooking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/moviepicForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/templates/userhis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/learn.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/learn/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/learn/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/learn/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/learn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/learn/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/sdp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/sdp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/sdp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/sdp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/sdp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/sdp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/sdp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn/sdp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/Faqs.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/Faqs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/Music.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/Music.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/catering.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/catering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/dealeregistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/dealeregistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/dealerlogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/dealerlogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/dhistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/dhistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/logselect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/marriage.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/marriage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/movies.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/movies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/newuserlogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/newuserlogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/newuserregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/newuserregister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/templates/select.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn/templates/select.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IQ1Pza3ISlv6ZVc9xH1tfGF3xD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51739395-b37c-4570-be6a-c5bd877821fb" name="Changes" comment="" />
+      <created>1670098978983</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670098978983</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block title %} Event {% endblock %}
+{% block body %}
+<head>
+  <style>
+  body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/music3.png);
+  background-size: cover;
+
+}
+.con
+{
+border-style: ridge;
+width:600;
+background-color:lightblue;
+opacity:0.85;
+}
+.button {
+  background-color:#4c84af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+</head>
+<div>
+    <br>
+    <br>
+     {% for msg in messages %}
+   <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>{{msg}}</strong>
+</div>
+
+</div>
+
+      {% endfor %}
+
+<div class="heading">
+
+</div>
+<div class="pop" align="center">
+  </div>
+<div>
+    <br>
+    <br>
+
+<div align="center" class="cust_book1" >
+  <u><h1 style="font-size:30px;"><b>Catering</b></h1></u>
+  <div class="con">
+  <form class="box" action="http://127.0.0.1:8000/catbooking/" method="post" id="mrt">
+  {% csrf_token %}
+
+<p1 style="font-size:20px;" ><b>Type of event:</b></p1><select name="tp"  class="drop" required>
+  <option value="Catering">Catering</option>
+</select><br><br>
+<p1 style="font-size:20px;" ><b>Name of the customer:</b></p1><input type="text" name="name" class="cust" required><br><br>
+<!--      <p1 style="font-size:20px;" ><b>Venue/Address</b></p1> <input type="text" name="venue" id="n6" class="venu" required><br><br>-->
+<!--      <p1 style="font-size:20px;" ><b>Date of the event:</b></p1><input type="date" name="date"  class="date" required><br><br>-->
+      <p1 style="font-size:20px;" ><b>Date of the event:</b></p1><input type="date" name="date"  class="date"   min="2022-12-14"required><br><br>
+
+      <div>
+  <label class="l7"> Select the catering service:</label>
+    <select name="sname" id="n6" class="food" required>
+     {% for i in il %}
+      <option value="{{i.sname}}">{{i.sname}}</option>
+      {% endfor %}
+    </select>
+</div id="love">
+      <div>
+  <p1 style="font-size:20px;" ><b>No Of Days</b></p1>
+    <select name="stime" id="n8" class="food" required>
+      <!-- <option value="None">None</option> -->
+      <option value="2 Days">2</option>
+      <option value="3 Days">3</option>
+        <option value="4 Days">4</option>
+        <option value="5 Days">5</option>
+    </select>
+</div>
+<!--<p1 style="font-size:20px;" ><b>StartTime:</b></p1><input type="time" name="stime"  class="st" required><br><br>-->
+<!--<p1 style="font-size:20px;" ><b>EndTime:</b></p1><input type="time" name="etime"  class="et" required><br><br>-->
+      <div>
+  <p1 style="font-size:20px;" ><b>Capacity</b></p1>
+    <select name="food" id="n7" class="food" required>
+      <!-- <option value="None">None</option> -->
+      <option value="300">300</option>
+      <option value="500">500</option>
+        <option value="800">800</option>
+        <option value="800">1000</option>
+        <option value="800">1500</option>
+        <option value="800">2000</option>
+        <option value="800">3000</option>
+    </select>
+</div>
+<div>
+<button class="button" type="submit"><b style="font-size:20px;">Book Event</b></button>
+
+<!--    <button type="submit" class="registerbtn">Login</button>-->
+</div>
+      <br>
+</form></div>
+    <br>
+    <br>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %} Dealer History {% endblock %}
+{% block body %}
+<head>
+    <style>
+        body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/music3.png);
+  background-size: cover;
+
+}
+table {
+
+  font-family: arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width: 100%;
+
+}
+td, th {
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+  padding: 8px;
+  color:black;
+}
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+
+    </style>
+      <style>
+.alert {
+  padding: 20px;
+  background-color: #5936f4;
+  color: white;
+  opacity:0.8;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+.button {
+  background-color:#000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<br>
+<br>
+{% if user.is_authenticated %}
+    <div class="pop" align="center" >
+        <marquee direction="right" id="pop1" >
+            <h5>WHERE BOOKINGS MADE EASY</h5>
+        </marquee>
+      </div>
+      <div align="center" class="cust_book3" >
+        <u><h1 class="book">Musical Concerts</h1></u>
+          <a href="/musbooking/"><button class="button" type="submit"><b style="font-size:20px;" style="color:black;">Book</b></button></a>
+<div align="left">
+<table id="customers" border="1" cellspacing="0">
+  <tr>
+    <th>S.No</th>
+    <th>Concert Name</th>
+    <th>Organized by</th>
+    <th>Venue</th>
+    <th>Price per Head</th>
+  </tr>
+
+  <tbody>
+  {% for j in kl2 %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+    <td >{{j.conname}}</td>
+    <td >{{j.nameor}}</td>
+    <td>{{j.conadd}}</td>
+    <td>{{j.price}}</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+  </div>
+
+
+
+
+      </div>
+    </form>
+
+{% else %}
+
+
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+  <strong>Please Sign In</strong>
+</div>
+					{% endif %}
+
+</body>
+</html>
+{% endblock %}

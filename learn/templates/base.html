@@ -1,0 +1,341 @@
+
+<!{% extends 'index.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body>
+
+ <div style = "text-align:center;">
+
+<!--<canvas id="myCanvas" width="1050" height="500" style="border:3px solid #000000;">-->
+<!--	-->
+<!--	-->
+<!--	-->
+<!--	-->
+<!--	-->
+<!--</canvas>-->
+<!--<script>-->
+<!--var canvas = document.getElementById("myCanvas");-->
+<!--if (canvas.getContext)-->
+<!--{-->
+<!-- var ctx = canvas.getContext('2d');-->
+<!-- ctx.fillStyle = "black";-->
+<!-- ctx.font = "30px Arial";-->
+<!-- ctx.textAlign = "center";-->
+<!-- ctx.fillText('"Hello done!aksjnhkjashjfd" asfkasmfkasfk"',350,50);-->
+<!-- ctx.fillText('"asfjbjbfhfjhnbasnbkfn"',200,90);-->
+<!--}-->
+<!--</script>-->
+	 </div>
+ </body>
+
+
+
+
+			<div class="header-cta">
+				<style>
+				body {
+  background-image: url('static/images/demo/bg-slide-01.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+}
+  .button {
+        left:1000px
+        background-color: #72a5c454;
+        border: none;
+        color: #080808;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+</style>
+				   <style>
+.alert {
+  padding: 20px;
+  background-color:#f46636 ;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+				<script>
+function myFunction() {
+  alert("Please Sign In");
+}
+</script>
+			</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="entry-content">
+							<br>
+							<br>
+							<div style = "text-align:center;">
+                                 <img class="blog-image" src="static/images/logo.png" width="55%" height="350" alt="Blog Image 2"/>
+                <br>
+                <br>
+				            <h4 class="entry-title"><a href="#">Organizing World class events</a></h4>
+
+					    </div>
+					</div>
+				</div>
+			</div>
+		</header>
+<br>
+<br>
+<br>
+<br>
+		<div class="content">
+			<div class="container box">
+				<section id="team" class="team">
+					<div class="container">
+				<div class="title-start team-menu col-md-4 col-md-offset-4">
+					{% if user.is_authenticated %}
+					<h2 class="team-heading"><a href="http://127.0.0.1:8000/img/">Movies</a></h2>
+					{% else %}
+					<h2 class="team-heading" onclick="myFunction()"><a href="http://127.0.0.1:8000/">Movies</a></h2>
+<!--					<div class="alert">-->
+<!--                      <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>-->
+<!--                       <strong>hey</strong> sign in first-->
+<!--                    </div>-->
+					{% endif %}
+				</div>
+				</div>
+					<div class="team-member row">
+					<div class="col-md-3 col-sm-6 member">
+						<img class="blog-image" src="static/images/team1.jpg" width="100%" height="350" alt="Blog Image 2"/>
+						<p class="name-member"><a  href="https://in.bookmyshow.com/vijayawada/movies/doctor-g/ET00305720">Doctor G</a></p>
+					    <ul class="team-ist">
+					     <li><b>Comedy/Drama </b></li>
+
+					     </ul>
+					    <div class="team-social">
+					    <i class="fa fa-2x fa-tumblr-square"></i>
+					    <i class="fa fa-2x fa-facebook"></i>
+					    <i class="fa fa-2x fa-twitter"></i>
+					    <i class="fa fa-2x fa-linkedin"></i>
+					    </div>
+					</div>
+					<div class="col-md-3 col-sm-6 member">
+						<img class="blog-image" src="static/images/team2.jpg" width="100%" height="350" alt="Blog Image 2"/>
+					    <p class="name-member"><a href="https://in.bookmyshow.com/vijayawada/movies/kantara-telugu/ET00342026"><b>Kantara(Telugu)</b></a></p>
+					    <ul class="team-ist">
+					     <li><b>Adventure/Drama/Thriller</b> </li>
+
+					     </ul>
+					    <div class="team-social">
+					    <i class="fa fa-2x fa-tumblr-square"></i>
+					    <i class="fa fa-2x fa-facebook"></i>
+					    <i class="fa fa-2x fa-twitter"></i>
+					    <i class="fa fa-2x fa-linkedin"></i>
+					    </div>
+					</div>
+					<div class="col-md-3 col-sm-6 member">
+						<img class="blog-image" src="static/images/team3.jpg" width="100%" height="350" alt="Blog Image 2"/>
+					    <p class="name-member"><a href="https://in.bookmyshow.com/vijayawada/movies/vikram-vedha/ET00319143"><b>Vikram Vedha</b></a></p>
+					    <ul class="team-ist">
+					     <li><b>Action/Crime/Thriller</b></li>
+
+					     </ul>
+					    <div class="team-social">
+					    <i class="fa fa-2x fa-tumblr-square"></i>
+					    <i class="fa fa-2x fa-facebook"></i>
+					    <i class="fa fa-2x fa-twitter"></i>
+					    <i class="fa fa-2x fa-linkedin"></i>
+					    </div>
+					</div>
+					<div class="col-md-3 col-sm-6 member">
+						<img class="blog-image" src="static/images/team4.jpg" width="100%" height="350" alt="Blog Image 2"/>
+						<p class="name-member"><a href="https://in.bookmyshow.com/vijayawada/movies/black-adam/ET00117411"><b>Black Adam</b></a></p>
+					    <ul class="team-ist">
+					     <li><b>Action/Fantasy/Sci-Fi </b></li>
+
+					     </ul>
+					    <div class="team-social">
+					    <i class="fa fa-2x fa-tumblr-square"></i>
+					    <i class="fa fa-2x fa-facebook"></i>
+					    <i class="fa fa-2x fa-twitter"></i>
+					    <i class="fa fa-2x fa-linkedin"></i>
+					    </div>
+					</div>
+					</div>
+				</section>
+				</div>
+		</div>
+
+
+				<div>
+			<section id="blog" class="row">
+<br>
+				<br>
+				<div class="title-start col-md-4 col-md-offset-4"><h2>Events</h2>
+				<p class="sub-text text-center">Awesome news and articles from us</p>
+				</div>
+					<div class="top">
+					</div>
+					<div class="content">
+
+					  <div class="blog col-md-4">
+					    <h2 class="blog-head"><a href="http://127.0.0.1:8000/availablehalls/">Marriage</a></h2>
+					    <h3>
+					    <a href="#"></a><span class="date-line">Dates available from November 1st</span>
+					    </h3>
+					    <img class="blog-image" src="static/images/demo/blog2.jpg" width="100%" height="250" alt="Blog Image 2"/>
+
+					    <p class="firstpara"><span class="firstcharacter"></span></p>
+
+<!--					    <button class="button-info read-more">Read More</button>-->
+
+					  </div>
+
+					  <div class="blog col-md-4">
+					    <h2 class="blog-head"><a href="http://127.0.0.1:8000/musicc/">Musical Concert</a></h2>
+					    <h3>Concert By<a href="#"> Team BTS </a><span class="date-line">  Tickets Available from November30th</span></h3>
+					    <img class="blog-image" src="static/images/demo/blog1.jpg"  width="100%" height="250" alt="Blog Image 2"/>
+					    <p class="firstpara"><span class="firstcharacter"></span></p>
+<!--					    <button class="button-info read-more">Read More</button>-->
+					  </div>
+					  <div class="blog col-md-4">
+					    <h2 class="blog-head"><a href="http://127.0.0.1:8000/availablecat/">Catering</a></h2>
+
+					    <h3><a href="#"></a><span class="date-line">All Types of Indian,Chinese,Italian are available</span></h3>
+					    <img class="blog-image" src="/static/images/demo/blog4.jpg" width="100%" height="250" alt="Blog Image 2"/>
+					    <p class="firstpara"><span class="firstcharacter"></span></p>
+<!--					    <button class="button-info read-more">Read More</button>-->
+					  </div>
+					</div>
+				</section>
+		</div>
+
+        </section><!-- contact -->
+
+
+<!-- FOOTER START -->
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>Company</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Products</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Accounts</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Resources</h1>
+    <ul>
+      <li>Webmail</li>
+      <li>Redeem code</li>
+      <li>WHOIS lookup</li>
+      <li>Site map</li>
+      <li>Web templates</li>
+      <li>Email templates</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Support</h1>
+    <ul>
+      <li>Contact us</li>
+      <li>Web chat</li>
+      <li>Open ticket</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <h1>Social</h1>
+    <ul>
+      <li><img src="/static/images/facebook.jpg" width="32" style="width: 32px;"></li>
+      <li><img src="/static/images/twitter.jpg" width="32" style="width: 32px;"></li>
+      <li><img src="/static/images/instagram.jpg" width="32" style="width: 32px;"></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+</div>
+<!-- END OF FOOTER -->
+
+
+
+		<!--== Javascript Files ==-->
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.scrollTo.js"></script>
+		<script src="js/jquery.nav.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/jquery.accordion.js"></script>
+		<script src="js/jquery.placeholder.js"></script>
+		<script src="js/jquery.fitvids.js"></script>
+		<script src="js/gmap3.js"></script>
+		<script src="js/fancySelect.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+
+		  $("#testimonial-container").owlCarousel({
+
+		      navigation : false, // Show next and prev buttons
+		      slideSpeed : 700,
+		      paginationSpeed : 400,
+		      singleItem:true,
+		  });
+
+		});
+
+
+		</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+{% endblock %}

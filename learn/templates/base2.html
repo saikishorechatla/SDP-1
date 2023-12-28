@@ -1,0 +1,144 @@
+{% extends 'index2.html' %}
+{% block title %}Home2{% endblock %}
+{% block body %}
+<html>
+<style>
+body{
+  background: url(/static/images/back.jfif) no-repeat center center fixed;
+  background-size: 1520px 1000px;
+ }
+ .grp1{
+    width: 300px;
+    height: 300px;
+    /* padding: 120px;  */
+    text-align: center;
+    border-radius:20px;
+    background-color: rgb(99, 209, 240);
+    position: absolute;
+    left: 100px;
+    opacity:0.8;
+    text-align: 3.0;
+}
+.grp2{
+    top:625px;
+    width: 300px;
+    height: 300px;
+    /* padding: 120px;  */
+    text-align: center;
+    border-radius:20px;
+    background-color: rgb(99, 209, 240);
+    position: absolute;
+    left: 100px;
+    opacity:0.8;
+    text-align: 3.0;
+}
+.grp3{
+    top:950px;
+    width: 300px;
+    height: 300px;
+    /* padding: 120px;  */
+    text-align: center;
+    border-radius:20px;
+    background-color: rgb(99, 209, 240);
+    position: absolute;
+    left: 100px;
+    opacity:0.8;
+    text-align: 3.0;
+}
+.grp4{
+    top:1275px;
+    width: 300px;
+    height: 300px;
+    /* padding: 120px;  */
+    text-align: center;
+    border-radius:20px;
+    background-color: rgb(99, 209, 240);
+    position: absolute;
+    left: 100px;
+    opacity:0.8;
+    text-align: 3.0;
+}
+.grp5{
+    top:400px;
+    width: 300px;
+    height: 200px;
+    /* padding: 120px;  */
+    text-align: center;
+    border-radius:20px;
+    background-color: rgb(99, 209, 240);
+    position: absolute;
+    left: 100px;
+    opacity:0.8;
+    text-align: 3.0;
+}
+
+</style>
+<style>
+.alert {
+  padding: 20px;
+  background-color: #5936f4;
+  color: white;
+  opacity:0.8;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+<body>
+<div>
+    	{% if user.is_authenticated %}
+<div class="grp1">
+   <a href="/movies"> <h3  > <div style="color:black;">Add Theatre</div></h3></a>
+     <a href="/dh"> <h3  > <div style="color:black;">History</div></h3></a>
+    <img src="/static/images/movie.jpg" width="200" height="140"  class="grppic1">
+  <br><br>
+</div>
+    <div class="grp5">
+    <a href="/addimgmovie">  <h3 id="grp5m"><div style="color:black;">Add Movies</div></h3></a>
+    <img src="/static/images/cat.jfif" width="200" height="140"  class="grppic5">
+  <br><br>
+</div>
+<div class="grp2">
+    <a href="/music"> <h3 id="grp2m" ><div style="color:black;">Musical Concert</div></h3></a>
+     <a href="/dh2"> <h3  > <div style="color:black;">History</div></h3></a>
+    <img src="/static/images/music.jpg" width="200" height="140"  class="grppic2">
+  <br><br>
+</div>
+<div class="grp3">
+    <a href="/marriage">  <h3 id="grp3m" ><div style="color:black;">Marriage</div></h3></a>
+     <a href="/dh3"> <h3  > <div style="color:black;">History</div></h3></a>
+    <img src="/static/images/mar.png" width="200" height="140"  class="grppic3">
+  <br><br>
+</div>
+<div class="grp4">
+    <a href="/catering">  <h3 id="grp4m"><div style="color:black;">Catering</div></h3></a>
+     <a href="/dh1"> <h3  > <div style="color:black;">History</div></h3></a>
+    <img src="/static/images/cat.jfif" width="200" height="140"  class="grppic4">
+  <br><br>
+</div>
+
+</div>
+{% else %}
+
+
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+  <strong>Please Sign In</strong>
+</div>
+					{% endif %}
+</body>
+</html>
+{% endblock %}

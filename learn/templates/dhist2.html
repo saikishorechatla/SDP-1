@@ -1,0 +1,77 @@
+{% extends 'index2.html' %}
+{% block title %}Deals{% endblock %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>MUSIC</title>
+  <style>
+
+table {
+
+  font-family: arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width: 100%;
+
+}
+
+
+td, th {
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+
+</style>
+</head>
+  <body background="/static/images/log.png"  style="background-size:cover;" >
+
+
+<!--  <div>-->
+<!--  <div align="left">-->
+<!--<h1><u>Music</u></h1>-->
+<!--  </div>-->
+
+  <div>
+  <div align="left">
+<h1><u>Music</u></h1>
+    <a href="http://127.0.0.1:8000/musdel/"><button type="Delete" ><b>Delete</b></button></a>
+  </div>
+<table id="music" border="1" cellspacing="0">
+  <tr>
+      <th>S.No</th>
+    <th>Concert Name</th>
+    <th>Name</th>
+       <th>Price</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+  </tr>
+  <body>
+  {% for i in a %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.conname}}</td>
+      <td>{{i.nameor}}</td>
+      <td>{{i.price}}</td>
+      <td>{{i.phno}}</td>
+      <td>{{i.email}}</td>
+  </tr>
+  {% endfor %}
+</body>
+</table>
+ </div>
+</body>
+</html>
+{% endblock %}

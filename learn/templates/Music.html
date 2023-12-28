@@ -1,0 +1,170 @@
+{% extends 'index2.html' %}
+{% block title %}Music{% endblock %}
+{% block body %}
+<html>
+  <head>
+    <title>ADD Musical Concert</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+       background: url(/static/images/music3.png) no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100%;
+      background-color:#c5eff6;
+      }
+      .container{
+      position:absolute;
+      left:30%;
+      lenght:100%;
+      width: 50%;
+      top:10%;
+      }
+      body, div, form, input, select, p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #000000;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: rgb(255 255 255 / 10%);
+      box-shadow: 0 2px 5px #ccc;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color:#ccccccd6;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+ }
+
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item:hover p, .item:hover i {
+      color: #00FFFF;
+      }
+      input:hover, select:hover, textarea:hover {
+      box-shadow: 0 0 5px 0 #00FFFF;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: rgb(255 255 255 / 15%);
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="testbox">
+      <form action="http://127.0.0.1:8000/music/" method="post">
+        {% csrf_token %}
+        <h1><b>Add Musical Concert</b></h1>
+        <div class="item">
+          <p><b>Concert Name</b></p>
+          <input type="text" name="name1" required/>
+        </div>
+          <div class="item">
+          <p><b>Name of Organizer</b></p>
+          <div class="name-item">
+            <input type="text" name="name2" placeholder="Name" required/>
+          </div>
+        </div>
+        <div class="item">
+          <p><b>Concert Address</b></p>
+          <input type="text" name="name3" placeholder="Street address" required/>
+
+          <div class="city-item">
+            <input type="text" name="name4" placeholder="City" required/>
+
+            <input type="number" name="name5" placeholder="Postal / Zip code" minlength="6" maxlength="6" required/>
+
+          </div>
+        </div>
+        <div class="item">
+          <p><b>Price</b></p>
+          <input type="text" name="name6" required/>
+        </div>
+        <div class="item">
+          <p><b>Your Address</b></p>
+          <input type="text" name="name7" placeholder="Street address" required/>
+
+          <div class="city-item">
+            <input type="text" name="name8" placeholder="City" required/>
+
+            <input type="number" name="name9" placeholder="Postal / Zip code" minlength="6" maxlength="6" required/>
+          </div>
+        </div>
+       <div class="item">
+          <p><b>Phone Number</b></p>
+          <input type="number" name="name10"  minlength="10" maxlength="10"  required/>
+        </div>
+        <div class="item">
+          <p><b>Email</b></p>
+
+          <input type="email" placeholder="Enter Gmail" name="name11" id="email" pattern=".+@gmail\.com" required>
+        </div>
+        <div class="btn-block">
+          <button type="submit" ><b>ADD</b></button>
+        </div>
+      </form>
+    </div>
+      </div>
+  </body>
+</html>
+{% endblock %}

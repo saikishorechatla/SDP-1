@@ -1,0 +1,99 @@
+{% extends 'index2.html' %}
+{% block title %}Home2{% endblock %}
+{% block body %}
+<div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #90EE19;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #90EE19;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:60%;
+}
+</style>
+   <style>
+.alert {
+  padding: 20px;
+  background-color: #5936f4;
+  color: white;
+  opacity:0.8;
+  text-align: center;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+</head>
+<body >
+<br>
+<br>
+{% if user.is_authenticated %}
+<br>
+<br>
+
+<h3 align="center">Contact Form</h3>
+
+<div class="container">
+  <form action="http://127.0.0.1:8000/dcontact/" method="post" >
+      {% csrf_token %}
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <label for="subject">Problem</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+{% else %}
+
+
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">x</span>
+  <strong>Please Sign In</strong>
+</div>
+					{% endif %}
+</body>
+</html>
+</div>
+{% endblock %}

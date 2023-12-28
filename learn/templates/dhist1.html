@@ -1,0 +1,75 @@
+{% extends 'index2.html' %}
+{% block title %}Deals{% endblock %}
+{% block body %}
+<div>
+<head>
+    <meta charset="UTF-8">
+    <title>Catering</title>
+  <style>
+
+table {
+
+  font-family: arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width: 100%;
+
+}
+
+
+td, th {
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+
+  background-color: #dddddd;
+
+}
+
+</style>
+</head>
+  <body background="/static/images/log.png"  style="background-size:cover;" >
+<div>
+  <div align="left">
+<h1><u>Catering</u></h1>
+    <a href="http://127.0.0.1:8000/catdel/"><button type="Delete" ><b>Delete</b></button></a>
+  </div>
+<table id="catering" border="1" cellspacing="0">
+  <tr>
+      <th>S.No</th>
+    <th>Service Name</th>
+    <th>Name</th>
+       <th>Price</th>
+      <th>Capacity Per Event</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+  </tr>
+  <body>
+  {% for i in v %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.sname}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.pph}}</td>
+      <td>{{i.capacity}}</td>
+      <td>{{i.mobile}}</td>
+      <td>{{i.email}}</td>
+  </tr>
+  {% endfor %}
+</body>
+</table>
+<body>
+ </div>
+</div>
+</body>
+</html>
+{% endblock %}

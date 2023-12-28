@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <style>
+body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/log.png);
+  background-size: cover;
+
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+.mid
+{
+  text-align:center
+}
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: rgb(234, 238, 240);
+  width:30%;
+  height:70%;
+  padding: 10px;
+  border: 5px solid rgb(218, 216, 226);
+  opacity: 0.7;
+  position:absolute;
+  left:35%;
+
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: rgb(248, 239, 239);
+  outline:#04AA6D;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0.5;}
+  to {opacity:1 ;}
+}
+.butt
+{
+position=absolute;
+left=800;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+<form action="http://127.0.0.1:8000/cp1/" method="post" id="lotable" name="changepassword" onsubmit="return validateall()" rel="stylesheet">
+   {% csrf_token %}
+  <div class="container">
+
+    {% for msg in messages %}
+      {% endfor %}
+  <div class="mid">
+<h1> Changing The password</h1>
+  </div>
+      <hr>
+    Username:<input type="text" name="username"required ><br>
+    Password:<input type="password" name="Password" minlength="8" required><br>
+Re-enter Password:<input type="password" name="re-enter Password"minlength="8"required>
+      <div class="butt">
+<button type=submit" class="registerbtn" >  Submit</button>
+          </div>
+      <hr>
+
+  </div>
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{% extends 'index2.html' %}
+{% block title %} Event {% endblock %}
+{% block body %}
+<head>
+  <style>
+  body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/music3.png);
+  background-size: cover;
+  color:#080808;
+
+}
+.con
+{
+border-style: ridge;
+width:600;
+background-color:lightblue;
+opacity:0.85;
+}
+.button {
+  background-color:#4c84af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.button {
+  background-color:#4c84af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<div>
+    <br>
+    <br>
+     {% for msg in messages %}
+   <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>{{msg}}</strong>
+</div>
+
+</div>
+
+      {% endfor %}
+
+<div class="heading">
+
+</div>
+<div class="pop" align="center">
+  </div>
+<div>
+    <br>
+    <br>
+
+<div align="center" class="cust_book1" >
+  <u><h1 style="font-size:30px;"><b>Cancel Show</b></h1></u>
+  <div class="con">
+   <form  action="http://127.0.0.1:8000/mardel/" method="post" id="mrt">
+  {% csrf_token %}
+
+  </a>
+       <br>
+
+<label class="l1"><b>Type of event:</b></label><select name="event"  class="drop" required>
+  <option value="Marriage">Marriage</option>
+</select><br>
+       <b>Hall</b><input type="text" name="hall1" class="cust" required><br>
+<label class="l2">Hall Address</label><input type="text" name="halladd1"  class="date" required><br><br>
+<button class="button" type="submit"><b style="font-size:20px;">Cancel Event</b></button>
+       </form>
+</div>
+</div>
+    <br>
+    <br>
+  </div>
+</div>
+
+{% endblock %}

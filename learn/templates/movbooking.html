@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block title %} Event {% endblock %}
+{% block body %}
+<head>
+  <style>
+  body {
+  margin:0;
+  padding:0;
+  background-image: url(/static/images/music3.png);
+  background-size: cover;
+
+}
+.con
+{
+border-style: ridge;
+width:600;
+background-color:lightblue;
+opacity:0.85;
+}
+.button {
+  background-color:#4c84af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    <style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+</head>
+<div>
+    <br>
+    <br>
+     {% for msg in messages %}
+   <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>{{msg}}</strong>
+</div>
+
+</div>
+
+      {% endfor %}
+
+<div class="heading">
+
+</div>
+<div class="pop" align="center">
+  </div>
+<div>
+    <br>
+    <br>
+
+<div align="center" class="cust_book1" >
+  <u><h1 style="font-size:30px;"><b>Book Tickets</b></h1></u>
+  <div class="con">
+  <form class="box" action="http://127.0.0.1:8000/movbooking/" method="post" id="mrt">
+  {% csrf_token %}
+
+<p1 style="font-size:20px;" ><b>Type of event:</b></p1><select name="tp"  class="drop" required>
+  <option value="Movies">Movies</option>
+</select><br><br>
+<p1 style="font-size:20px;" ><b>Name of the customer:</b></p1><input type="text" name="name" class="cust" required><br><br>
+<!--      <p1 style="font-size:20px;" ><b>Movie Name:</b></p1> <input type="text" name="venue" id="n6" class="venu" required><br><br>-->
+      <div>
+  <label class="l7"> Select The Movie:</label>
+    <select name="mname" id="n6" class="food" required>
+     {% for i in il %}
+      <option value="{{i.mname}}">{{i.mname}}</option>
+      {% endfor %}
+    </select>
+</div id="love">
+<!--<p1 style="font-size:20px;" ><b>Date of the Movie:</b></p1><input type="date" name="date"  class="date" required><br><br>-->
+      <p1 style="font-size:20px;" ><b>Date of the event:</b></p1><input type="date" name="date"  class="date"   min="2022-12-04"required><br><br>
+<!--<p1 style="font-size:20px;" ><b>StartTime:</b></p1><input type="time" name="stime"  class="st" required><br><br>-->
+      <div>
+  <p1 style="font-size:20px;" ><b>Start Time</b></p1>
+    <select name="stime"  class="food" required>
+      <!-- <option value="None">None</option> -->
+      <option value="11:00">11:00</option>
+      <option value="2:00">2:00</option>
+        <option value="5:00">5:00</option>
+        <option value="8:00">8:00</option>
+    </select>
+</div>
+<!--<p1 style="font-size:20px;" ><b>EndTime:</b></p1><input type="time" name="etime"  class="et" required><br><br>-->
+<!--<p1 style="font-size:20px;" ><b>Price Per Ticket:</b></p1><input type="text" name="name" class="cust" required><br><br>-->
+<div>
+  <p1 style="font-size:20px;" ><b>Price Per Ticket</b></p1>
+    <select name="stime" id="n8" class="food" required>
+      <!-- <option value="None">None</option> -->
+      <option value="Platinum-270Rs">Platinum-270Rs</option>
+      <option value="Gold-200Rs">Gold-200Rs</option>
+        <option value="First Class-150Rs">First Class-150Rs</option>
+<!--        <option value="8:00">8:00</option>-->
+    </select>
+</div>
+      <div>
+  <p1 style="font-size:20px;" ><b>No of tickets</b></p1>
+    <select name="food" id="n7" class="food" required>
+      <!-- <option value="None">None</option> -->
+      <option value="1">1</option>
+      <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</div>
+<div>
+<button class="button" type="submit"><b style="font-size:20px;">Book Event</b></button>
+
+<!--    <button type="submit" class="registerbtn">Login</button>-->
+</div>
+      <br>
+</form></div>
+    <br>
+    <br>
+  </div>
+</div>
+
+{% endblock %}
